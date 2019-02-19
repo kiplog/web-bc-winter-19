@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+      }
+
+      ul {
+        position: fixed;
+        top: 0;
+        right: 10px;
+        z-index: 1000;
+      }
+
+      section {
+        width: 100vw;
+        height: 100vh;
+        border: 1px solid black;
+        padding: 2rem;
+
+        background: #ffc;
+
+        position: absolute;
+        transform: scale(0.01);
+        transition: all 0.8s cubic-bezier(0.67, 0.25, 0.31, 1.39);
+      }
+
+      section:target {
+        transform: scale(1);
+      }
+    </style>
+  </head>
+
+  <!-- day 04 jan 30, 3:57 -->
+  <body>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <section id="home">
+      <h1>Home</h1>
+      <p>
+        Froth, galão aroma as latte variety percolator. Steamed frappuccino,
+        cream extra, affogato decaffeinated instant chicory cream. Ut cultivar
+        instant, crema in froth sit white wings french press. Coffee irish aged
+        sweet, est, to go, shop macchiato frappuccino coffee kopi-luwak.
+        Frappuccino robusta est, bar sit coffee java cultivar crema as con panna
+        mocha. Lungo, irish to go saucer single shot frappuccino filter.
+      </p>
+    </section>
+
+    <section id="about">
+      <h1>About</h1>
+      <p>
+        Venison meatloaf shoulder prosciutto doner chicken andouille pancetta
+        short loin picanha jerky. Drumstick turkey prosciutto alcatra swine
+        porchetta. Ground round short loin bacon, flank bresaola pastrami
+        kielbasa beef. Pastrami ball tip meatloaf capicola tongue hamburger,
+        picanha buffalo pig ribeye filet mignon jowl fatback burgdoggen chicken.
+        Brisket kielbasa bresaola tenderloin salami. Bacon pork short ribs
+        andouille shank flank.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h1>Contact</h1>
+      <p>
+        Caramels jelly-o icing topping. Macaroon icing topping donut jelly.
+        Topping candy jelly-o cake bonbon cookie. Cheesecake liquorice wafer
+        gummies candy donut. Lollipop gummi bears soufflé cake sesame snaps.
+        Soufflé gingerbread pie. Halvah sweet roll oat cake macaroon sugar plum
+        marshmallow cotton candy chocolate cake carrot cake. Liquorice gummi
+        bears bonbon marzipan jelly topping jelly beans. Pie topping donut
+        halvah caramels halvah apple pie fruitcake carrot cake. Dessert gummi
+        bears macaroon dragée halvah bonbon gummies. Chupa chups lemon drops
+        bear claw pie gingerbread pastry pudding muffin carrot cake. Dessert
+        brownie cookie marshmallow jelly beans. Gummies oat cake tiramisu. Lemon
+        drops macaroon caramels.
+      </p>
+    </section>
+  </body>
+</html>

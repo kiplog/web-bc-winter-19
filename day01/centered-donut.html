@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Simple Element exercise</title>
+
+    <style>
+      body {
+        height: 100vh;
+        background-color: #d3d3c9;
+        background: #ddd;
+        color: red;
+        margin: 0;
+        display: flex;
+
+        /* new */
+        font-family: arial;
+        font-weight: bold;
+      }
+
+      div {
+        /* set the dimensions of the circle */
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        border-radius: 50%;
+
+        /* put a donut in the background, and make it fit */
+
+        background: url(http://paulmccann.com/webdev/8196.JPG) center;
+        background-size: 400px;
+        background-repeat: no-repeat;
+
+        /* cut off the edges of the background-image: */
+
+        overflow: hidden;
+
+        /* center all the text inside, and set a text color */
+        text-align: center;
+        text-shadow: 0px 1px 5px white;
+        color: black;
+
+        /* set the transitino so the rotate works */
+        transition: all 2s ease-in;
+
+        /* make the immediate child (the main box) easy to center */
+        display: flex;
+      }
+
+      div:hover {
+        transform: rotate(360deg);
+      }
+
+      main {
+        margin: auto;
+      }
+
+      h1 {
+        font-size: 36px;
+        padding-bottom: 10px;
+        border-bottom: 3px dotted gray;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      sup {
+        font-size: 15px;
+      }
+
+      abbr {
+        text-decoration: none;
+      }
+
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <main>
+        <h1>
+          Paul McCann
+          <sup>&copy;</sup>
+        </h1>
+        <!-- <hr noshade> -->
+
+        <p>
+          I am a
+          <em>Web</em>
+          Builder<br />
+          in Evanston <abbr title="Illinois">IL</abbr> and I teach at <br />
+          <a href="http://digitalbootcamp.com">Digital Bootcamp</a>
+        </p>
+      </main>
+    </div>
+  </body>
+</html>
