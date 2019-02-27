@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Basic animations, with steps</title>
+
+    <style>
+      .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50px;
+        border: 1px solid red;
+        display: grid;
+        /* transition: all 2s; */
+        animation: jackInTheBox 2s 2s infinite alternate;
+      }
+      /* this will make it turn twice */
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0);
+          opacity: 0;
+        }
+        80% {
+          opacity: 0.75;
+        }
+        100% {
+          opacity: 1;
+          transform: rotate(360deg);
+        }
+      }
+
+      .circle:hover {
+        /* transform: rotate(360deg); */
+      }
+
+      p {
+        margin: auto;
+      }
+
+      @keyframes jello {
+        from,
+        11.1%,
+        to {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+
+        22.2% {
+          -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+          transform: skewX(-12.5deg) skewY(-12.5deg);
+        }
+
+        33.3% {
+          -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+          transform: skewX(6.25deg) skewY(6.25deg);
+        }
+
+        44.4% {
+          -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+          transform: skewX(-3.125deg) skewY(-3.125deg);
+        }
+
+        55.5% {
+          -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+          transform: skewX(1.5625deg) skewY(1.5625deg);
+        }
+
+        66.6% {
+          -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+          transform: skewX(-0.78125deg) skewY(-0.78125deg);
+        }
+
+        77.7% {
+          -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+          transform: skewX(0.390625deg) skewY(0.390625deg);
+        }
+
+        88.8% {
+          -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+          transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+        }
+      }
+
+      .jello {
+        -webkit-animation-name: jello;
+        animation-name: jello;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+      }
+
+      @-webkit-keyframes heartBeat {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+
+        14% {
+          -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+        }
+
+        28% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+
+        42% {
+          -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+        }
+
+        70% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+
+      @keyframes heartBeat {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+
+        14% {
+          -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+        }
+
+        28% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+
+        42% {
+          -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+        }
+
+        70% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+
+      .heartBeat {
+        -webkit-animation-name: heartBeat;
+        animation-name: heartBeat;
+        -webkit-animation-duration: 1.3s;
+        animation-duration: 1.3s;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes jackInTheBox {
+        from {
+          opacity: 0;
+          -webkit-transform: scale(0.1) rotate(30deg);
+          transform: scale(0.1) rotate(30deg);
+          -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+        }
+
+        50% {
+          -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+        }
+
+        70% {
+          -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+        }
+
+        to {
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+
+      .jackInTheBox {
+        -webkit-animation-name: jackInTheBox;
+        animation-name: jackInTheBox;
+      }
+
+      .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
+
+      .animated.infinite {
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+      }
+
+      .animated.delay-1s {
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s;
+      }
+
+      .animated.delay-2s {
+        -webkit-animation-delay: 2s;
+        animation-delay: 2s;
+      }
+
+      .animated.delay-3s {
+        -webkit-animation-delay: 3s;
+        animation-delay: 3s;
+      }
+
+      .animated.delay-4s {
+        -webkit-animation-delay: 4s;
+        animation-delay: 4s;
+      }
+
+      .animated.delay-5s {
+        -webkit-animation-delay: 5s;
+        animation-delay: 5s;
+      }
+
+      .animated.fast {
+        -webkit-animation-duration: 800ms;
+        animation-duration: 800ms;
+      }
+
+      .animated.faster {
+        -webkit-animation-duration: 500ms;
+        animation-duration: 500ms;
+      }
+
+      .animated.slow {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+      }
+
+      .animated.slower {
+        -webkit-animation-duration: 3s;
+        animation-duration: 3s;
+      }
+
+      @media (print), (prefers-reduced-motion) {
+        .animated {
+          -webkit-animation: unset !important;
+          animation: unset !important;
+          -webkit-transition: none !important;
+          transition: none !important;
+        }
+      }
+
+      figure {
+        width: 250px;
+        height: 307px;
+        border: 1px solid black;
+        overflow: hidden;
+      }
+
+      figure img {
+        animation: walk 2s infinite steps(8) alternate;
+      }
+
+      @keyframes walk {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-2000px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- jan 23, 4pm -->
+    <div class="circle"><p>Hey!</p></div>
+
+    <figure>
+      <img
+        src="http://paulmccann.com/img/WalkingManSpriteSheet-2000.png"
+        alt=""
+      />
+    </figure>
+  </body>
+</html>

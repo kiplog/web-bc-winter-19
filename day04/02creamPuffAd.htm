@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cream Puff display ad</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+      rel="stylesheet"
+    />
+
+    <style type="text/css">
+      body {
+        font-family: Lato, arial;
+      }
+
+      /* Begin Ad 1 */
+
+      .ad-1 {
+        position: relative;
+        width: 500px;
+        height: 575px;
+        background: #000;
+      }
+      .content {
+        position: absolute;
+        width: 500px;
+        height: 575px;
+      }
+
+      .content h2 {
+        position: absolute;
+        top: 0rem;
+        color: white;
+        padding: 1rem;
+        font: 700 40px/40px Lato;
+        animation: fadeIn 1s 2s both;
+        text-transform: uppercase;
+        text-shadow: 0 1px 0 #0f0, 0 5px 20px #eee;
+      }
+
+      .content h3 {
+        position: absolute;
+        top: 7rem;
+        color: white;
+        padding: 1rem;
+        font: 300 30px Lato;
+        animation: fadeIn 1s 3s both;
+        letter-spacing: -0.05em;
+      }
+
+      .creampuff {
+        position: absolute;
+        width: 500px;
+        height: 575px;
+        /* add image, position and animate */
+        background-image: url("http://paulmccann.com/img/creampuff.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        animation: puffIn 1s 0.5s both ease-in;
+      }
+
+      form {
+        position: absolute;
+        width: 400px;
+        margin: 0px;
+        bottom: 40px;
+        left: 70px;
+        /* add animation */
+        animation: formIn 1s 4s ease-in both;
+        animation-name: formIn;
+        animation-duration: 1s;
+        animation-delay: 4s;
+      }
+      #email {
+        width: 158px;
+        height: 48px;
+
+        padding: 0 20px;
+        font: 16px "Lucida Grande", sans-serif;
+        color: #fff;
+        /* add text shadows, borders, gradients */
+        border: 1px solid #aaaaaa;
+        border-top-left-radius: 9px;
+        border-bottom-left-radius: 9px;
+        background: #ccc;
+      }
+
+      #submit {
+        height: 50px;
+        padding: 0 20px;
+        font: 20px sans-serif;
+        color: #335577;
+
+        /* add text shadows, borders, gradients */
+
+        border: 1px solid #aaaaaa;
+        border-top-right-radius: 9px;
+        border-bottom-right-radius: 9px;
+        background: linear-gradient(to bottom, #eee, #333);
+
+        background: linear-gradient(
+          to bottom,
+          rgba(155, 153, 153, 0.65) 0%,
+          rgba(255, 253, 253, 1) 100%
+        );
+      }
+
+      /* WebKit Animations */
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        90% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes puffIn {
+        0% {
+          transform: translateY(-500px);
+          opacity: 0;
+        }
+        50% {
+          transform: translateY(10px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+
+      @keyframes formIn {
+        0% {
+          transform: translateX(-500px);
+          opacity: 0;
+        }
+        90% {
+          transform: translateX(10px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(0px);
+          opacity: 1;
+        }
+      }
+    </style>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <script type="text/javascript">
+      $(function() {});
+    </script>
+  </head>
+  <body>
+    <!-- jan 30, 2:46pm -->
+    <section class="wrapper">
+      <div class="ad-1">
+        <div class="creampuff"></div>
+
+        <div class="content">
+          <h2>Our Creampufs can beat up your creampuffs.</h2>
+          <h3>Order yours today. Or else.</h3>
+          <form method="post" action="script.php">
+            <input type="text" id="email" placeholder="Email address..." />
+            <input type="submit" id="submit" value="Give me!" />
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

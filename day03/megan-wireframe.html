@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      img {
+        width: 100%;
+      }
+      figure {
+        border: 1px solid rgba(200, 200, 200, 0.5);
+      }
+
+      .jumbotron {
+        background: url(http://paulmccann.com/img/botanic_HDR-2300-0.jpg)
+          no-repeat;
+        background-size: 100%;
+        background-position: 0 0px;
+        height: 50vh;
+      }
+
+      @media (min-width: 576px) {
+        .jumbotron {
+          padding: 1rem 2rem;
+        }
+      }
+
+      .heading-right {
+        text-align: right;
+        margin-top: 0px;
+      }
+
+      .lead {
+        padding-left: 180px;
+      }
+
+      .nav-spread {
+        border: 1px solid rgba(200, 200, 200, 0.5);
+        justify-content: space-between;
+      }
+
+      .col-social {
+        display: flex;
+        align-items: center;
+      }
+
+      /* .row-social {
+        align-items: center;
+        height: 100%;
+      } */
+
+      .fab {
+        color: #f00;
+        font-size: 40px;
+        display: block;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 992px) {
+        .fab {
+          color: #333;
+          font-size: 20px;
+        }
+      }
+
+      footer {
+        background: #343434;
+        color: white;
+        padding: 10px;
+      }
+    </style>
+
+    <title>Hello, world!</title>
+  </head>
+
+  <body>
+    <!-- jan 23, 3pm -->
+    <div class="container">
+      <div class="jumbotron jumbotron">
+        <h1 class="display-4 heading-right">Fluid jumbotron</h1>
+        <p class="lead">
+          This is a modified jumbotron that occupies the entire horizontal space
+          of its parent. The image placed in the CSS background property is
+          using the zero-quality trick, where the jpg setting is quality: 0, but
+          the width shwon is half the actual pixel dimension. The image is 224k,
+          where the full size would be more than double.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <ul class="nav nav-pills nav-spread">
+        <li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+        <li class="nav-item">
+          <a
+            class="nav-link disabled"
+            href="#"
+            tabindex="-1"
+            aria-disabled="true"
+            >Disabled</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="row row-2">
+        <div class="col-md-4">
+          <figure>
+            <img src="http://paulmccann.com/img/8161.JPG" alt="" />
+          </figure>
+        </div>
+        <div class="col-md-5">
+          <h2>Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            ipsum dolore cupiditate minus animi.
+          </p>
+        </div>
+        <div class="col-md col-social">
+          <div class="container">
+            <div class="row row-social">
+              <div class="col"><i class="fab fa-twitter"></i></div>
+              <div class="col"><i class="fab fa-facebook-f"></i></div>
+
+              <div class="col"><i class="fab fa-linkedin-in"></i></div>
+              <div class="col"><i class="fab fa-instagram"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row row-3">
+        <div class="col-md-4 order-2">
+          <figure>
+            <img src="http://paulmccann.com/img/8161.JPG" alt="" />
+          </figure>
+        </div>
+        <div class="col-md order-1">
+          <h2>Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            ipsum dolore cupiditate minus animi.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row row-3">
+        <div class="col-md-4">
+          <figure>
+            <img src="http://paulmccann.com/img/8161.JPG" alt="" />
+          </figure>
+        </div>
+        <div class="col-md">
+          <h2>Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            ipsum dolore cupiditate minus animi.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col"><footer>Footer stuff</footer></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <row>
+        <col-12><small>copyright 2019</small></col-12>
+      </row>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
