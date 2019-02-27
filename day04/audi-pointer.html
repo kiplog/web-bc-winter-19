@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Caption animation - part II</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        border: 0px solid black;
+      }
+
+      figure {
+        width: 500px;
+        height: 335px;
+        border: 2px solid black;
+        overflow: hidden;
+        position: relative;
+      }
+
+      figcaption {
+        position: absolute;
+        left: 0px;
+        bottom: -200px;
+        width: auto;
+        padding: 1em 0.5em;
+        background-color: rgba(255, 255, 255, 0.5);
+        font-family: arial;
+        transition: bottom 1s, left 0.5s;
+      }
+
+      figure:hover figcaption {
+        transition: bottom 1s, left 1.5s;
+        bottom: 110px;
+        left: 90px;
+      }
+
+      figcaption:before {
+        content: "";
+        width: 0;
+        height: 0;
+        display: block;
+        position: absolute;
+        top: -30px;
+        left: 60px;
+        border-bottom: 30px solid rgba(255, 255, 255, 0.5);
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+      }
+
+      div {
+        width: 250px;
+        height: 350px;
+        border: 1px solid black;
+        overflow: hidden;
+      }
+
+      div img {
+        width: 2000px;
+        animation: walker 1s infinite steps(8) alternate pause;
+      }
+
+      div:hover img {
+        animation: walker 1s infinite steps(8) alternate running;
+      }
+
+      @keyframes walker {
+        0% {
+          transform: translateX(0px);
+        }
+
+        100% {
+          transform: translateX(-2000px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- jan 30, day 04 -->
+    <figure>
+      <img
+        src="http://paulmccann.com/img/audi.jpg"
+        alt="audi with a bumper sensor"
+      />
+      <figcaption>This is a sensor</figcaption>
+    </figure>
+
+    <div>
+      <img
+        src="http://paulmccann.com/img/WalkingManSpriteSheet-2000.png"
+        alt=""
+      />
+    </div>
+  </body>
+</html>

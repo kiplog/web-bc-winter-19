@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      /* set the maximum width of the conatiner and make its childredn flex */
+      .container {
+        display: flex;
+        max-width: 1000px;
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        box-sizing: border-box;
+      }
+
+      /* set the dimensions - flex will wont a basis, and we'll calc it by removeing the margin so 5 boxes fit in a row
+      
+      set the background blend mode */
+
+      figure {
+        box-sizing: border-box;
+        position: relative;
+        flex: 0 1;
+        flex-basis: calc(200px - 0.5em);
+        width: 200px;
+        height: 200px;
+        margin: 0.25em;
+        border: 1px solid black;
+        background-image: url(http://paulmccann.com/img/animals/fuDog_1000.jpg);
+        background-color: rgba(0, 0, 255, 0.5);
+        background-size: cover;
+        background-position: 40%;
+      }
+
+      figure:nth-child(1) {
+        background-blend-mode: hard-light;
+      }
+      figure:nth-child(2) {
+        background-blend-mode: soft-light;
+      }
+      figure:nth-child(3) {
+        background-blend-mode: difference;
+      }
+      figure:nth-child(4) {
+        background-blend-mode: multiply;
+      }
+      figure:nth-child(5) {
+        background-blend-mode: screen;
+      }
+      figure:nth-child(6) {
+        background-blend-mode: overlay;
+      }
+      figure:nth-child(7) {
+        background-blend-mode: hue;
+      }
+      figure:nth-child(8) {
+        background-blend-mode: saturation;
+      }
+      figure:nth-child(9) {
+        background-blend-mode: color;
+      }
+      figure:nth-child(10) {
+        background-blend-mode: luminosity;
+      }
+      figure:nth-child(11) {
+        background-blend-mode: exclusion;
+      }
+      figure:nth-child(12) {
+        background-blend-mode: color-dodge;
+      }
+      figure:nth-child(13) {
+        background-blend-mode: color-burn;
+      }
+
+      /*  position the caption in the bottom of the figure */
+
+      figcaption {
+        box-sizing: border-box;
+        font: 1.4em arial;
+        padding: 0.25em;
+        text-align: center;
+        color: white;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <figure><figcaption>hard-light</figcaption></figure>
+      <figure><figcaption>soft-light</figcaption></figure>
+      <figure><figcaption>difference</figcaption></figure>
+      <figure><figcaption>multiply</figcaption></figure>
+      <figure><figcaption>screen</figcaption></figure>
+      <figure><figcaption>overlay</figcaption></figure>
+      <figure><figcaption>hue</figcaption></figure>
+      <figure><figcaption>saturation</figcaption></figure>
+      <figure><figcaption>color</figcaption></figure>
+      <figure><figcaption>luminosity</figcaption></figure>
+      <figure><figcaption>exclusion</figcaption></figure>
+      <figure><figcaption>color-dodge</figcaption></figure>
+      <figure><figcaption>color-burn</figcaption></figure>
+      <figure><figcaption>normal</figcaption></figure>
+    </div>
+  </body>
+</html>
