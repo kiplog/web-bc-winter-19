@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS basics</title>
+
+    <style>
+      .message {
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input name="color" type="radio" onclick="document.bgColor='yellow';" />
+      Yellow <br />
+      <input name="color" type="radio" onclick="document.bgColor='blue';" />
+      blue <br />
+      <input name="color" type="radio" onclick="document.bgColor='red';" /> red
+      <br />
+
+      <input type="button" value="add 5 + 5" onclick="add(5,5)" />
+    </form>
+
+    <button onclick="checktime();">Is it time to drink?</button>
+
+    <div class="message"></div>
+
+    <script>
+      function add(x, y) {
+        var total = x + y;
+        var message;
+
+        // console.log("the total is " + total);
+
+        if (total > 10) {
+          message = "the total is more than 10";
+        } else if (total === 10) {
+          message = "the total is 10";
+        } else {
+          message = "the total less than 10";
+        }
+
+        document.querySelector(".message").innerHTML = message;
+      }
+
+      function checktime() {
+        var now = new Date();
+        var whatHour = now.getHours();
+        var result = whatHour >= 12 ? "its afternoon!" : "wait til noon";
+        document.querySelector(".message").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

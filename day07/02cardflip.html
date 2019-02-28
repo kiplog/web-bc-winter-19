@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flipping card with JavaScript onclick</title>
+
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+        font: 0.9em arial;
+      }
+
+      .scene {
+        width: 50vw;
+        height: 50vh;
+        perspective: 1600px;
+        border: 1px solid red;
+        display: grid;
+      }
+
+      .explanation {
+        font-size: 0.9em;
+      }
+
+      .card {
+        position: relative;
+        margin: auto;
+        /* position: absolute; */
+        /* top: 0px;
+        left: 0px; */
+
+        width: 80%;
+        height: 80%;
+        transform-style: preserve-3d;
+        transition: all 1s;
+      }
+
+      .side {
+        position: absolute;
+        backface-visibility: hidden;
+        height: 100%;
+        width: 100%;
+        display: grid;
+      }
+
+      .side h1 {
+        margin: auto;
+        font: 2rem arial;
+      }
+
+      .front {
+        background: rgb(236, 161, 174);
+        /* transform: rotateY(0deg); */
+      }
+
+      .back {
+        background-color: rgb(218, 218, 91);
+        transform: rotateY(180deg);
+      }
+
+      .card.flipped {
+        transform: rotateY(180deg);
+      }
+
+      /* .card:hover {
+        transform: rotateY(180deg);
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="scene">
+      <div class="card" id="card">
+        <div class="front side">
+          <h1>
+            Front
+          </h1>
+        </div>
+        <div class="back side">
+          <h1>
+            Back
+          </h1>
+        </div>
+      </div>
+      <!-- card closes -->
+    </div>
+    <!-- scene closes -->
+
+    <div class="explanation">
+      <h1>Flipping card with JavaScript onclick</h1>
+      <p>The scene on the left has a card in it, with two sides.</p>
+      <p>
+        Things are laid out with grid, just to center things, but the 2 sides
+        are positioned aboslute to put them in the same place.
+      </p>
+      <p>
+        The scene gets the perspective, the card needs preserve-3d, and the
+        sides need their backface-visibility hidden.
+      </p>
+      <p>The back side get rotated on the Y axis 180deg.</p>
+      <p>
+        There's a .flipped class waiting for javascript to apply it when the
+        card is clicked on.
+      </p>
+      <p>
+        I replaced the fixed pixel dimensions to make the whole thing
+        responsive.
+      </p>
+    </div>
+
+    <script>
+      // apply the click handler to the card
+      function init() {
+        var card = document.getElementById("card");
+        card.onclick = flip;
+      }
+      // apply the flipped class to the clicked on element
+      function flip() {
+        var element = event.currentTarget;
+        element.classList.toggle("flipped");
+      }
+
+      window.onload = init;
+    </script>
+  </body>
+</html>

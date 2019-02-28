@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS random color script</title>
+
+    <style>
+      button {
+        margin: 1rem;
+        padding: 0.5rem;
+        background: rgba(255, 255, 255, 0.5);
+        outline: none;
+        font: 1em monospace;
+        border-radius: 6px;
+      }
+      .colortext {
+        font: 1em monospace;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.5);
+        color: black;
+        width: 200px;
+        text-align: center;
+        text-shadow: 0px 1px 4px rgba(50, 50, 50, 0.8);
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="changeColor();">
+      change background
+    </button>
+
+    <div class="colortext"></div>
+
+    <script>
+      function changeColor() {
+        document.bgColor = randomColor();
+      }
+
+      function randomColor() {
+        var color = "#";
+
+        var chars = "0123456789abcdef";
+
+        for (var i = 0; i < 6; i++) {
+          var rand = Math.floor(16 * Math.random());
+          color += chars.charAt(rand);
+        }
+        // or you can be really smart:
+        // color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+        // console.log(color);
+
+        let colortext = document.querySelector(".colortext");
+        colortext.innerHTML = "the color is " + color;
+
+        return color;
+      }
+    </script>
+  </body>
+</html>

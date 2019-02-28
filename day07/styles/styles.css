@@ -1,0 +1,59 @@
+body {
+  background: #888;
+}
+
+.wrapper {
+  width: 90vw;
+  border: 1px solid black;
+  margin-bottom: 100px;
+}
+
+@supports (display: grid) {
+  div {
+    display: grid;
+  }
+}
+
+.grid {
+  border: 1px solid purple;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+header {
+  background: beige;
+  grid-column: span 3;
+  text-align: center;
+}
+
+nav {
+  background: cornflowerblue;
+  grid-column: span 1;
+}
+
+main {
+  background: coral;
+  grid-column: span 2;
+  padding: 2rem;
+}
+
+footer {
+  grid-column: span 3;
+  background: slateblue;
+}
+
+@media screen and (max-width: 500px) {
+  .grid header {
+    grid-column: span 2;
+  }
+
+  .grid nav {
+    grid-column: span 1;
+    grid-row: 1;
+  }
+
+  .grid main {
+    grid-column: span 3;
+  }
+}
