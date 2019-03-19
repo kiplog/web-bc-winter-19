@@ -73,10 +73,17 @@ for People Who Code](https://tallys.github.io/color-theory/)
 - [ ] The process of defining and delivering a site (or any user experience project)  - (https://developers.google.com/web/fundamentals/design-and-ui/ux-basics/)
 
 ### Tools
-- [ ] Using Atom (http://flight-manual.atom.io/using-atom/). Concentrate on learning how to move around, and on selecting and editing text.
+- [ ] Using VS Code (https://code.visualstudio.com/docs). Concentrate on learning how to move around, and on selecting and editing text. 
+
+- [ ] Download the keyboard shortcut PDF for your platform - 
+(https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference) and learn to use at least one new shortcut each time you use VS Code.
+
+
+- [ ] Using Emmet in VS Code :
+    Settings (https://code.visualstudio.com/docs/editor/emmet)
+    CheatSheet (https://docs.emmet.io/cheat-sheet/)
 
 - [ ] Chrome dev tools (https://developers.google.com/web/tools/chrome-devtools/)
-
 
 
 ## Additional resources
